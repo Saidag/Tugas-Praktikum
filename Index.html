@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Said Agil Siradz</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
   </head>
   <body>
-    <div id="app">
-      <img width="500px" id="image" src="" alt="" />
-      <br>
-      <input placeholder="input" id="input" type="text" />
-      <button onclick="generate()" id="btn">Gambar</button>
-    </div>
+    <div id="app" class="flex items-center justify-center width-auto h-screen flex-col ap-y-4">
+        
+        <img :src="profileUser" class="w-[200px] rounded-full">
+        <h1 class="text-4xl font-bold text-black-900">{{nameUser}} {{lastName}}</h1>
+        <button @click="generateUser()" class="bg-pink-500 text-white mt-5 rounded-20 w-[200px] h-[50px] font-medium rounded-full">Generate </button>
     <script src="./index.js"></script>
   </body>
-</html> 
+</html>
